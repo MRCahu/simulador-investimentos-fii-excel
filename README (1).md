@@ -46,10 +46,9 @@ simulador-investimentos-fii-excel/
 
 ## 🖼 Exemplos Visuais
 
-As imagens abaixo ilustram o simulador em funcionamento *(imagens meramente ilustrativas)*:  
-
-![Exemplo 1](images/captura1.png)  
-![Exemplo 2](images/captura2.png)  
+As imagens abaixo ilustram o simulador em funcionamento:  
+![image](https://github.com/user-attachments/assets/27ddc3f9-93fd-4cd6-a0ac-ace34ddb17f8)
+![image](https://github.com/user-attachments/assets/a747e40c-559f-4d87-ab42-d0033dea49c3)
 
 ## 💡 Tecnologias e Aprendizados
 
