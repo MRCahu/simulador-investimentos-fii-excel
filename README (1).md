@@ -26,11 +26,7 @@ Facilitar o planejamento financeiro ao permitir simulações simples e rápidas 
 ```
 simulador-investimentos-fii-excel/
 ├── README.md
-├── Simulador_Investimento_FII.xlsx
-├── .gitignore
-└── images/
-    ├── captura1.png
-    └── captura2.png
+└── fiisimulator.js
 ```
 
 ## 🚀 Como Usar
@@ -38,17 +34,39 @@ simulador-investimentos-fii-excel/
 1. Clone o repositório:  
    `git clone https://github.com/MRCahu/simulador-investimentos-fii-excel.git`  
 
-2. Abra o arquivo `Simulador_Investimento_FII.xlsx` no Excel.  
+2. Preencha os campos destacados em amarelo com seus valores desejados.
 
-3. Preencha os campos destacados em amarelo com seus valores desejados.  
+3. Veja os resultados automáticos e as projeções dos cenários.
 
-4. Veja os resultados automáticos e as projeções dos cenários.  
+## ▶️ Executar o componente React
 
-## 🖼 Exemplos Visuais
+Para rodar o arquivo `fiisimulator.js` utilizando React e Vite, crie um `package.json` semelhante ao abaixo:
 
-As imagens abaixo ilustram o simulador em funcionamento:  
-![image](https://github.com/user-attachments/assets/27ddc3f9-93fd-4cd6-a0ac-ace34ddb17f8)
-![image](https://github.com/user-attachments/assets/a747e40c-559f-4d87-ab42-d0033dea49c3)
+```json
+{
+  "name": "fii-simulator",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^2.4.3",
+    "vite": "^4.0.0"
+  }
+}
+```
+
+Em seguida execute:
+
+```bash
+npm install
+npm run dev
+```
+
+O servidor local será iniciado e o componente ficará disponível no navegador.
 
 ## 💡 Tecnologias e Aprendizados
 
