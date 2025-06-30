@@ -36,7 +36,10 @@ const FIISimulator = () => {
       if (year <= years) {
         const months = year * 12;
         // Valor futuro de uma anuidade
-        const futureValue = investment * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) || 0;
+        const futureValue =
+          monthlyRate === 0
+            ? investment * months
+            : investment * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
         const monthlyDividends = futureValue * 0.01;
         const totalInvested = investment * months;
         const totalReturn = futureValue - totalInvested;
