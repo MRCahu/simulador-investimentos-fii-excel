@@ -27,38 +27,35 @@ const FIISimulator = () => {
 
   const calculateInvestment = () => {
     const monthlyRate = rate / 100;
-    const scenarios = [1, 2, 3, 5, 10, 15, 20, 25, 30];
     const newResults = [];
     const newChartData = [];
 
-    scenarios.forEach((year) => {
-      if (year <= years) {
-        const months = year * 12;
-        // Valor futuro de uma anuidade
-        const futureValue = investment * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) || 0;
-        const monthlyDividends = futureValue * 0.01;
-        const totalInvested = investment * months;
-        const totalReturn = futureValue - totalInvested;
-        const returnPercentage = totalInvested > 0 ? (totalReturn / totalInvested) * 100 : 0;
+    for (let year = 1; year <= years; year++) {
+      const months = year * 12;
+      // Valor futuro de uma anuidade
+      const futureValue = investment * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) || 0;
+      const monthlyDividends = futureValue * 0.01;
+      const totalInvested = investment * months;
+      const totalReturn = futureValue - totalInvested;
+      const returnPercentage = totalInvested > 0 ? (totalReturn / totalInvested) * 100 : 0;
 
-        const result = {
-          year,
-          futureValue,
-          monthlyDividends,
-          totalInvested,
-          totalReturn,
-          returnPercentage
-        };
+      const result = {
+        year,
+        futureValue,
+        monthlyDividends,
+        totalInvested,
+        totalReturn,
+        returnPercentage
+      };
 
-        newResults.push(result);
-        newChartData.push({
-          ano: year,
-          Patrimonio: futureValue,
-          'Total Investido': totalInvested,
-          'Dividendos Mensais': monthlyDividends
-        });
-      }
-    });
+      newResults.push(result);
+      newChartData.push({
+        ano: year,
+        Patrimonio: futureValue,
+        'Total Investido': totalInvested,
+        'Dividendos Mensais': monthlyDividends
+      });
+    }
 
     setResults(newResults);
     setChartData(newChartData);
